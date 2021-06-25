@@ -93,3 +93,26 @@ a:hover {
     text-decoration: none;
     list-style-type: none;
 }
+.pokemonDetail {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    height: 500px;
+}
+.name {
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.leftDisplay {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+}
+.rightDisplay {
+    text-align: center;
+}

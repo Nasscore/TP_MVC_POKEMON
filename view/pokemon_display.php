@@ -4,7 +4,7 @@
 ?>
 
 <div class="pokemon">
-    <a href="#">
+    <a href="pokemonDetail.php?indice=<?php echo $i?>">
 
 
     <img class="miniature" src="<?php echo $pokemon->getLogoSprites()?>">

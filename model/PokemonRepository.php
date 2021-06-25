@@ -23,15 +23,16 @@ class PokemonRepository
 * @return Pokemon[]
 */
     public function findAllPokemon(): array {
-        $file = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100';
+        $file = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=30';
         $data = file_get_contents($file);
         $arrayJson = json_decode($data);
-
+        $id = 0;
         foreach ($arrayJson->results as $value) {
             $data = file_get_contents($value->url);
             $jsonPokemon = json_decode($data);
             $artwork = 'official-artwork';
             $types = [];
+            $stats = [];
             foreach($jsonPokemon->types as $type) {
                 $types[] = new Types($type->type->name,'../asset/type-'.$type->type->name.'.png') ;
             }
@@ -40,8 +41,10 @@ class PokemonRepository
                 $jsonPokemon->sprites->front_default,
                 $jsonPokemon->sprites->other->$artwork->front_default,
                 $jsonPokemon->order,
-                $types
+                $types,
+                $id
             );
+            $id++;
         }
         return $this->pokemons;
     }

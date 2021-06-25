@@ -8,6 +8,7 @@ include 'header.php';
 <div class="pokemons">
 
     <?php
+
     foreach ($pokemons as $pokemon) {
 
         include 'pokemon_display.php';
