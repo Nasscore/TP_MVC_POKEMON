@@ -15,7 +15,6 @@ include 'header.php';
 
     ?>
 
-
 </div>
         </a>
 <?php
