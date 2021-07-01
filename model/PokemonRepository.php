@@ -3,7 +3,7 @@ include_once '../model/Pokemon.php';
 include_once '../model/Types.php';
 include_once '../model/Stats.php';
 include_once '../model/Abilities.php';
-
+include_once '../model/User.php';
 
 class PokemonRepository
 {
@@ -32,7 +32,7 @@ class PokemonRepository
 
     private function initPokemons(): void {
 
-        $file = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20';
+        $file = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=80';
         $data = file_get_contents($file);
         $arrayJson = json_decode($data);
         $id = 0;

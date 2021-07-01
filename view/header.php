@@ -1,3 +1,10 @@
+<?php
+   session_start();
+?>
+
+
+
+
 <!doctype html>
 <html lang=fr>
 <head>
@@ -12,15 +19,29 @@
 <body>
 
 <div class="app-header">
-    <div class="pokeball">
-        <img src="../asset/pokeball.png" width="100px" height="auto" class="pokeball">
+    <div class="container">
+        <div class="row head">
+            <div class="pokeball">
+                <img src="../asset/pokeball.png" width="100px" height="auto" class="pokeball">
+            </div>
+            <h2><a href="pokedex.php"> Le super Pokédex</a></h2>
+            <div class="pokeball">
+                <img src="../asset/pokeball.png" width="100px" height="auto" class="pokeball">
+            </div>
+        </div>
     </div>
-    <h2>Le super Pokédex</h2>
-    <div class="pokeball">
-        <img src="../asset/pokeball.png" width="100px" height="auto" class="pokeball">
+    <div class="connection">
+        <?php if(!isset($_SESSION['user'])){
+
+            echo '<a href="connect.php" class="btn btn-secondary">Se connecter</a>';
+            echo '<a href="register.php" class="btn btn-secondary">S\'inscrire</a>';
+        }else{
+            echo '<a href="../controller/disconnectController.php" class="btn btn-danger">Se déconnecter</a>';
+        }
+       ?>
     </div>
-
-
 
 </div>
+
+</body>
 <div class="container">

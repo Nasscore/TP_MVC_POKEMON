@@ -7,12 +7,31 @@
     justify-content: center;
     align-items: center;
     color: navajowhite;
-    gap: 150px;
+    /*gap: 150px;*/
     -webkit-box-shadow: 7px 6px 2px 1px rgba(0,0,0,0.22);
     box-shadow: 7px 6px 2px 1px rgba(0,0,0,0.22);
+
+
+}
+.connection {
+    margin-right: 80px;
+    padding-right: 10px;
+}
+.head {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 270px;
 }
 body {
     background-color: navajowhite;
+}
+
+.btnSubmit{
+    background-color: dimgray;
+    color: navajowhite;
+    margin-bottom:15px;
 }
 .pokemons{
     display: flex;
@@ -21,7 +40,20 @@ body {
     /*align-items: center;*/
     justify-content: center;
     text-align: center;
-
+}
+.submit {
+    margin-top: 10px;
+}
+.titreForm {
+    color: dimgray;
+    margin-top: 15px;
+    text-align: center;
+}
+.formInscription {
+    margin-top: 50px;
+    border: 2px solid dimgray;
+    -webkit-box-shadow: 6px 6px 9px 1px rgba(0,0,0,0.79);
+    box-shadow: 6px 6px 9px 1px rgba(0,0,0,0.79);
 }
 .pokemon {
     width: 15%;
@@ -226,4 +258,23 @@ a:hover {
 .page-link:hover {
     background-color: navajowhite;
     color: dimgray;
+}
+.btn-secondary {
+    background-color: navajowhite;
+    color: dimgray;
+}
+.inputConnect {
+    width: 85%;
+
+}
+.formulaireConnection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formConnect {
+    border: 2px solid dimgray;
+    margin-top: 35px;
+    -webkit-box-shadow: 6px 6px 9px 1px rgba(0,0,0,0.79);
+    box-shadow: 6px 6px 9px 1px rgba(0,0,0,0.79);
 }
